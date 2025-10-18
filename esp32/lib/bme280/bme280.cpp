@@ -15,7 +15,7 @@
  * BME280::readHumidity
  */
 
- #include <Arduino.h>
+#include <Arduino.h>
 #include "bme280.h"
 
 namespace{
