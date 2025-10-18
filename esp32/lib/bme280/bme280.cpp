@@ -2,11 +2,10 @@
 
 /**
  * BME280::begin()
- *      1. Check that the I2C bus is up
- *      2. Check that the sensor is present
- *      3. Read temperature and pressure calibration
- *      4. Read humidity calibration
- *      5. Configure oversamping and mode
+ *      1. Check that the sensor is present
+ *      2. Read temperature and pressure calibration
+ *      3. Read humidity calibration
+ *      4. Configure oversamping and mode
  * 
  * BME280::readTemperature()
  * 
