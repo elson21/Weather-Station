@@ -8,7 +8,7 @@
 class BME280{
     public:
         // initialize the sensor over I2C using the TwoWire instance and address
-        bool begin(TwoWire &wire = Wire, uint8_t addr = 0x76);
+        bool begin(TwoWire &wire=Wire, uint8_t addr=0x76);
 
         float readTemperature();    // temperature in °C
         float readPressure();   // pressure in Pa
