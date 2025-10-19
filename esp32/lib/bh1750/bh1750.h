@@ -8,7 +8,7 @@
 class BH1750{
     public:
         // Initialize the sensor over I2C using the TwoWire instance and address
-        bool begin(TwoWire &wire=Wire, uint8_t addr=0x23)
+        bool begin(TwoWire &wire=Wire, uint8_t addr=0x23);
 
         /**
          * - Moonless night       : 0.1 lx
