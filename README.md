@@ -17,6 +17,7 @@ This project will teach me:
 ## 🛠️ Hardware
 **Sensors**  
 - **BME280 -** Temperature, humidity, and barometric pressure (I²C)
+- **BH1759 -** Ambient light sensor
 - **UV Sensor Module -** 200-370nm range ([Tinytronics](https://www.tinytronics.nl/en/sensors/optical/light-and-color/uv-light-sensor-module-200-370nm))
 
 **Prototype Phase**

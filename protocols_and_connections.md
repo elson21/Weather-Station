@@ -31,6 +31,30 @@ Serial Peripheral Interface or SPI protocol is a high-speed communication protoc
 [SPI Tutorial (sparkfun)](https://learn.sparkfun.com/tutorials/serial-communication)  
 [SPI Standards and Compliance](https://www.etsi.org/deliver/etsi_ts/103700_103799/103713/15.04.01_60/ts_103713v150401p.pdf)  
 
+# Sensor Connections
+
+| **Sensor** | **Pin** | **ESP32 Pin** | **Notes** |
+|------------|---------|---------------|-----------|
+| **BME280** | VCC | 3.3V | |
+| | GND | GND | |
+| | SCL | GPIO 22 | I²C Clock |
+| | SDA | GPIO 21 | I²C Data |
+| | CSB | NC | Not Connected |
+| | SDO | GND or 3.3V | Sets I²C address: GND=0x76, 3.3V=0x77 |
+| **BH1750** | VCC | 3.3V | |
+| | GND | GND | |
+| | SCL | GPIO 22 | Shared I²C bus |
+| | SDA | GPIO 21 | Shared I²C bus |
+| | ADDR | GND or 3.3V | Sets I²C address: GND=0x23, 3.3V=0x5C |
+| **UV Sensor** | VCC | 3.3V | |
+| | GND | GND | |
+| | OUT | GPIO 34-39 | Any ADC1 pin (34, 35, 36, 39 recommended) |
+
+**Key points:**
+- BME280 and BH1750 share the I²C bus (pins 21/22)
+- Set SDO and ADDR to avoid I²C address conflicts if needed
+- UV sensor needs an ADC-capable GPIO (use ADC1 pins to avoid WiFi conflicts)
+
 # ESP32 Pin Reference Guide
 
 ## GPIO Pin Capabilities
