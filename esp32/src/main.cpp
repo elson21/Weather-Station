@@ -3,6 +3,10 @@
 #include <Wire.h>
 #include "bme280.h"
 #include "bh1750.h"
+#include "uv_sensor.h"
+
+// Pins
+const int UV_PIN = 34;
 
 // instantiate classes
 BME280 bme; // temperature, humidity & pressure
@@ -38,6 +42,11 @@ void loop(){
     // read BH sensor
     float ambientLight = bh.readAmbientLight();
 
+    // read UV sensor
+    float uvVoltage = getUVVoltage(UV_PIN);
+    float uvIndex = voltageToIndex(uvVoltage);
+
+    // print values
     Serial.print("Temperature: ");
     Serial.print(temperature);
     Serial.println("°C");
@@ -54,5 +63,13 @@ void loop(){
     Serial.print(ambientLight);
     Serial.println(" lux");
 
-    delay(1000);
+    Serial.print("UV index: ");
+    Serial.print(uvIndex);
+    Serial.println();
+
+    Serial.print("UV voltage: ");
+    Serial.print(analogRead(UV_PIN));
+    Serial.println(" V");
+
+    delay(5000);
 }
