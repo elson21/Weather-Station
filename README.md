@@ -22,7 +22,7 @@ This project will teach me:
 
 **Prototype Phase**
 - ESP32 DevKit
-- Breakout boards (BME280, UV sensor)
+- Breakout boards (BME280, BH1750, UV sensor)
 - Breadboard, jumper wires, resistors
 - USB power (solar later?)  
 
@@ -38,6 +38,7 @@ This project will teach me:
 **Goal:** Get all sensors working with ESP32
 
 ✅ BME280 driver implementation  
+✅ BH1750 driver implementation  
 ✅ UV sensor integration  
 ⏳ I²C bus management  
 ⏳ Power optimization  

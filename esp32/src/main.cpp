@@ -52,7 +52,7 @@ void loop(){
 
     Serial.print("Light intensity: ");
     Serial.print(ambientLight);
-    Serial.print(" lux");
+    Serial.println(" lux");
 
     delay(1000);
 }
