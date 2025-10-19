@@ -34,7 +34,7 @@ This project will teach me:
 
 ## 📋 Development Phases
 ### Phase 1: 🧪 Prototype & Embedded Programming
-**Status:** In Progress  
+**Status:** ⏳In Progress  
 **Goal:** Get all sensors working with ESP32
 
 ✅ BME280 driver implementation  
@@ -99,6 +99,7 @@ This project will teach me:
 **Status:** ⬜Not Started  
 **Goal:** Let others access my weather data
 
+⬜Built a CLI
 ⬜RESTful API design  
 ⬜Authentication (API keys?)  
 ⬜Rate limiting  

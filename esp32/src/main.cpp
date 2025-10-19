@@ -4,32 +4,42 @@
 #include "bme280.h"
 #include "bh1750.h"
 #include "uv_sensor.h"
+#include "i2c_manager.h"
+
 
 // Pins
 const int UV_PIN = 34;
+
 
 // instantiate classes
 BME280 bme; // temperature, humidity & pressure
 BH1750 bh;  // ambient light
 
+
 void setup(){
     Serial.begin(115200);
     Serial.println("Booting...");
 
-    Wire.begin(21, 22); // initialize I2C
-    Serial.println("Wire.begin completed");
+    I2CManager::begin();
+    Serial.println("I2C initialization completed.");
 
-    if(!bme.begin(Wire, 0x76)){
+    I2CManager::scanBus();
+
+    // Initialize BME280 sensor
+    if(!bme.begin(I2CManager::getWire(), 0x76)){
         Serial.println("Sensor BME280 not found");
         while(1);
     }
     Serial.println("BME280 initialized succesfully");
 
-    if(!bh.begin(Wire, 0x23)){
+    // Initialize BH1750 sensonr
+    if(!bh.begin(I2CManager::getWire(), 0x23)){
         Serial.println("Sensor BH1750 not found.");
         while(1);
     }
+    Serial.println("BH1750 Initialized succesfully");
 }
+
 
 void loop(){
     Serial.println("Loop running...");
