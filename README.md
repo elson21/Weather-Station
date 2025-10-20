@@ -16,14 +16,14 @@ This project will teach me:
 
 ## 🛠️ Hardware
 **Sensors**  
-- **BME280 -** Temperature, humidity, and barometric pressure (I²C)
-- **BH1759 -** Ambient light sensor
-- **UV Sensor Module -** 200-370nm range ([Tinytronics](https://www.tinytronics.nl/en/sensors/optical/light-and-color/uv-light-sensor-module-200-370nm))
+- **BME280 -** Temperature, humidity, and barometric pressure ([Datasheet](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme280-ds002.pdf))
+- **BH1750 -** Ambient light sensor ([Datasheet](https://www.mouser.com/datasheet/2/348/bh1750fvi-e-186247.pdf))
+- **UV Sensor Module -** GUVA-S12SD analog UV sensor ([Tinytronics](https://www.tinytronics.nl/en/sensors/optical/light-and-color/uv-light-sensor-module-200-370nm))
 
 **Prototype Phase**
 - ESP32 DevKit
 - Breakout boards (BME280, BH1750, UV sensor)
-- Breadboard, jumper wires, resistors
+- Breadboard, jumper wires
 - USB power (solar later?)  
 
 **Production Phase**
