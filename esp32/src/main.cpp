@@ -3,13 +3,7 @@
 #include <WiFi.h>
 #include "sensors.h"
 #include "http_client.h"
-
-
-// WiFi credentials
-// CHANGE IT TO SOMETHING SAFER!!
-const char *ssid = "Silence of the LANs";
-const char *password = "fetALEcTOneXHaid";
-const char *serverURL = "http://192.168.2.8:8000/api/readings";
+#include "config.h"
 
 
 // instantiate classes
@@ -24,14 +18,14 @@ void setup(){
     btStop();   // disable bluetooth
 
     // setup wiifi
-    WiFi.begin(ssid, password);
+    WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
     while (WiFi.status() != WL_CONNECTED){
         delay(100);
         Serial.print(".");
     }
     Serial.println("\nWiFi connected.");
 
-    http.init(serverURL);
+    http.init(SERVER_URL);
 
     // initialize sensors
     if (!sensors.begin()){

@@ -13,6 +13,12 @@ This project will teach me:
 - **Security -** Penetration testing and vulnerability patching
 - **Machine Learning -** Weather prediction models
 
+# Configuration Setup
+
+1. Copy `src/config.example.h` to `src/config.h`
+2. Edit `src/config.h` with your actual WiFi credentials
+3. Never commit `src/config.h` to git
+
 
 ## 🛠️ Hardware
 **Sensors**  
@@ -47,12 +53,12 @@ This project will teach me:
 **Technologies:** C++, PlatformIO, Arduino Framework
 
 ## Phase 2: 🌐 Web Backend & Database
-**Status:** ⬜Not Started  
+**Status:** ⏳In Progress  
 **Goal:** Deploy a server to receive and store sensor data  
 
-⬜Set up web server (FastAPI)  
+✅Set up web server (FastAPI)  
 ⬜Database design (PostgreSQL)  
-⬜ESP32 → Server communication (HTTP)  
+✅ESP32 → Server communication (HTTP)  
 ⬜Data persistence and retrieval  
 ⬜Basic web dashboard  
 ⬜Basic logs file 
