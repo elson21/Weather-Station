@@ -11,7 +11,7 @@ struct SensorData {
     float temperature;  // °C
     float pressure;     // Pa
     float humidity;     // %RH
-    float lighLevel;    // lux
+    float lightLevel;    // lux
     float uvIndex;      // 0-11
 };
 

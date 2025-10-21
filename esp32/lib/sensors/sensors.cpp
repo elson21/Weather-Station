@@ -38,11 +38,11 @@ SensorData Sensors::read(){
 
     // bme readings
     data.temperature = bme.readTemperature();
-    data.pressure = bme.readPressure();
+    data.pressure = bme.readPressure() / 101325.0;
     data.humidity = bme.readHumidity();
 
     // bh readings
-    data.lighLevel = bh.readAmbientLight();
+    data.lightLevel = bh.readAmbientLight();
 
     // uv readings
     float uvVoltage = getUVVoltage(UV_PIN);
