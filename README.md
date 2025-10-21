@@ -40,9 +40,9 @@ This project will teach me:
 ✅ BME280 driver implementation  
 ✅ BH1750 driver implementation  
 ✅ UV sensor integration  
-⏳ I²C bus management  
+✅ I²C bus management  
 ⏳ Power optimization  
-⏳ Basic data logging to Serial  
+✅ Basic data logging to Serial  
 
 **Technologies:** C++, PlatformIO, Arduino Framework
 
@@ -50,11 +50,12 @@ This project will teach me:
 **Status:** ⬜Not Started  
 **Goal:** Deploy a server to receive and store sensor data  
 
-⬜Set up web server (Flask/FastAPI or Node.js?)  
-⬜Database design (PostgreSQL/InfluxDB for time-series?)  
-⬜ESP32 → Server communication (HTTP/MQTT)  
+⬜Set up web server (FastAPI)  
+⬜Database design (PostgreSQL)  
+⬜ESP32 → Server communication (HTTP)  
 ⬜Data persistence and retrieval  
 ⬜Basic web dashboard  
+⬜Basic logs file 
 
 **Technologies:** Python/Node.js, SQL/NoSQL, HTTP/MQTT
 
